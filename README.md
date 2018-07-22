@@ -2,10 +2,10 @@
 # java设计模式
 * [一、创建型]()
     * [1.单例（Singleton）](#1-单例singleton)
-    * [2.简单工厂(Simple Factory)](#2-简单工厂)
+    * [2.简单工厂(Simple Factory)](#2 -简单工厂)
 
 
-### 1.单例（Singleton）
+### 1. 单例（Singleton）
 
 
 ```java
@@ -164,6 +164,6 @@ public class   Singleton {
 }
 ```
 
-2.简单工厂(Simple Factory)
+###2. 简单工厂(Simple Factory)
 
 

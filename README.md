@@ -162,8 +162,7 @@ public class   Singleton {
 
 
 }
-```
-
-###2. 简单工厂(Simple Factory)
+````
+### 2.简单工厂(Simple Factory)
 
 

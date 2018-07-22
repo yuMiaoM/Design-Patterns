@@ -1,6 +1,11 @@
 # Design-Patterns
-## java设计模式
-### 单例模式
+# java设计模式
+* [一、创建型]()
+    * [1.单例（Singleton）](#1-单例singleton)
+
+
+### 1.单例（Singleton）
+
 
 ```java
 
@@ -76,7 +81,7 @@ public class Singleton {
 }
 
 
-**
+/**
  * 双重校验锁-线程安全
  */
 public class Singleton {

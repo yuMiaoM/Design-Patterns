@@ -162,7 +162,8 @@ public class   Singleton {
 
 
 }
-````
+```
 ### 2. 工厂方法模式(FactoryMethod)
+
 
 

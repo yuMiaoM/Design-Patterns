@@ -2,7 +2,7 @@
 # java设计模式
 * [一、创建型]()
     * [1. 单例（Singleton）](#1-单例singleton)
-    * [2. 简单工厂(Simple Factory)](#2-简单工厂Simple-Factory)
+    * [2. 工厂方法模式(Factory Method)](#2-工厂方法模式Factory-Method)
 
 
 ### 1. 单例（Singleton）
@@ -163,6 +163,6 @@ public class   Singleton {
 
 }
 ````
-### 2. 简单工厂(Simple Factory)
+### 2. 工厂方法模式(Factory Method)
 
 

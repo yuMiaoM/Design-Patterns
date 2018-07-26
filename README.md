@@ -1,5 +1,5 @@
 # Design-Patterns
-# java设计模式
+# Java设计模式
 * [一、创建型]()
     * [1. 单例（Singleton）](#1-单例singleton)
     * [2. 工厂方法模式(FactoryMethod)](#2-工厂方法模式factorymethod)

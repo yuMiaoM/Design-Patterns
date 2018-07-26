@@ -164,6 +164,120 @@ public class   Singleton {
 }
 ```
 ### 2. 工厂方法模式(FactoryMethod)
+ 
+#### 类图
+
+<div align="center"> <img src="img/factory.png"/> </div><br>
+
+#### 实现方式(一)
+```java
+
+/**
+ * 工厂抽象类
+ */
+public abstract class Factory {
+    /**
+     * 抽象方法返回产品
+     * @return
+     */
+    public abstract Product createProdct();
+
+}
 
 
+public  abstract class   Product {
+
+    public abstract void productName();
+
+}
+
+
+/**
+ * 工厂实现类返回相应的产品
+ */
+public class ConcreteFactory extends Factory {
+    /**
+     * 返回Product 实现类 ProductA 或者Product B
+     * @return
+     */
+    @Override
+    public Product createProdct() {
+
+        return  new ProductA();
+        //return  new ProductB();
+    }
+}
+
+/**
+ * 产品实现类A
+ */
+public class ProductA extends Product {
+    @Override
+    public void productName() {
+        System.out.print("产品A");
+    }
+}
+
+/**
+ * 产品实现类B
+ */
+public class ProductB extends Product {
+    @Override
+    public void productName() {
+        System.out.print("产品B");
+    }
+}
+```
+#### 实现方式(二)
+
+```java
+/**
+ * 使用反射获得产品类
+ */
+public abstract class Factory {
+    /**
+     * @param clazz 需要实现的产品类
+     * @return
+     */
+    public abstract <T extends Product> T createProduct(Class<T> clazz);
+}
+
+/**
+ * 通过反射实现产品类
+ */
+public class ConcreteFactory extends Factory {
+    @Override
+    public <T extends Product> T createProduct(Class<T> clazz) {
+        Product p=null;
+        try {
+            p= (Product) Class.forName(clazz.getName()).newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return (T) p;
+    }
+}
+
+/**
+ *使用方法 
+ * 
+ */
+public class Client {
+
+    @Test
+    public void Test() {
+        ConcreteFactory concreteFactory = new ConcreteFactory();
+        Product prodct = concreteFactory.createProdct();
+        prodct.productName();
+    }
+    @Test
+    public void Test2(){
+        FactoryMethod.imp2.ConcreteFactory factory=new FactoryMethod.imp2.ConcreteFactory();
+        Product p=factory.createProduct(ProductB.class);
+        p.productName();
+
+    }
+
+}
+```
 

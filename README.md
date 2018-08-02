@@ -3,7 +3,8 @@
 * [一、创建型]()
     * [1. 单例（Singleton）](#1-单例singleton)
     * [2. 工厂方法模式(FactoryMethod)](#2-工厂方法模式factorymethod)
-    * [3.抽象工厂(AbstractFactory)](#3-抽象工厂abstractfactory)
+    * [3. 抽象工厂(AbstractFactory)](#3-抽象工厂abstractfactory)
+    * [4. 生成器（Builder）](#4-生成器builder)
 
 
 ### 1. 单例（Singleton）
@@ -369,4 +370,4 @@ public class ProductB2 extends AbstractProductB {
     }
 
 ```
-
+### 4.生成器（Builder）

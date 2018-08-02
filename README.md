@@ -282,3 +282,91 @@ public class Client {
 }
 ```
 ### 3. 抽象工厂(AbstractFactory)
+#### 类图
+
+<div align="center"> <img src="img/abstract.png"/> </div><br>
+
+#### 实现代码
+
+```java
+
+package AbstractFactory;
+
+public abstract class AbstractFactory {
+
+    public abstract AbstractProductA getProductA();
+    public  abstract AbstractProductB getProductB();
+}
+
+public class ConcreteProductAB1Factory extends AbstractFactory {
+    @Override
+    public AbstractProductA getProductA() {
+        return new ProductA1();
+    }
+
+    @Override
+    public AbstractProductB getProductB() {
+        return new ProductB1();
+    }
+}
+public class ConcreteProductAB1Factory extends AbstractFactory {
+    @Override
+    public AbstractProductA getProductA() {
+        return new ProductA1();
+    }
+
+    @Override
+    public AbstractProductB getProductB() {
+        return new ProductB1();
+    }
+}
+
+
+
+package AbstractFactory;
+
+public abstract class AbstractProductA {
+    public abstract void productName();
+}
+
+public abstract class AbstractProductA {
+    public abstract void productName();
+}
+
+public class ProductA1 extends AbstractProductA {
+    @Override
+    public void productName() {
+        System.out.println("我是产品A1");
+    }
+}
+public class ProductA2 extends AbstractProductA {
+    @Override
+    public void productName() {
+        System.out.println("我是产品A2");
+    }
+}
+public class ProductB1 extends AbstractProductB {
+    @Override
+    public void productName() {
+        System.out.println("我是产品B1");
+    }
+}
+public class ProductB2 extends AbstractProductB {
+    @Override
+    public void productName() {
+        System.out.println("我是产品B2");
+    }
+}
+
+
+
+  使用方式
+  @Test
+    public void TestAbstroctFactory(){
+        AbstractFactory fAB1=new ConcreteProductAB1Factory();
+        fAB1.getProductA().productName();
+
+    }
+
+```
+
